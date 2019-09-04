@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
+@DisplayName("When Running MathUtils")
 class MathUtilsTest {
 
 	MathUtils utils;
@@ -51,6 +52,15 @@ class MathUtilsTest {
 		}
 
 	}
+
+	@Test
+	@DisplayName("Mutiplymethod")
+	void testmultiplication() {
+		
+		assertAll(()->assertEquals(3,utils.muliplication(1, 3)),()->assertEquals(4,utils.muliplication(1, 4)));
+		
+	}
+	
 
 	@Test
 	void testDivide() {
